@@ -1,13 +1,14 @@
 #include<stdio.h>
-
-int gcd(int a,int b){
-	if(b==0) return a;
-	else return gcd(b,a%b);
-}
+#include<string.h>
 
 int main(){
-	int a,b,c;
-	scanf("%d %d",&a,&b);
-	
-	printf("%d",gcd(a,b));
+	int i,j;
+	char a[100][100];
+	i=0;
+	while(scanf("%s",a[i++])!=EOF);
+	for(j=i-1;j>0;--j){
+		printf("%s ",a[j]);
+	}
+	printf("%s",a[0]);
+	return 0;
 }
